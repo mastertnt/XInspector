@@ -11,7 +11,7 @@
         <Grid.Resources>
             <ResourceDictionary Source="/XInspector;component/Editors/PropertyEditorViewTemplates.xaml"/>
         </Grid.Resources>
-        <ListBox x:Name="InnerGrid" ItemsSource="{Binding ViewModels}" Background="Aquamarine" ItemTemplate="{StaticResource DefaultPropertyTemplate}">
+        <ListBox x:Name="InnerGrid" ItemsSource="{Binding ViewModels}" ItemTemplate="{StaticResource DefaultPropertyTemplate}">
         </ListBox>
     </Grid>
 </UserControl>
