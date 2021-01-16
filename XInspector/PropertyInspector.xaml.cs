@@ -23,6 +23,9 @@ namespace XInspector
         /// </summary>
         public static readonly DependencyProperty msViewModelsProperty = DependencyProperty.Register("ViewModels", typeof(ObservableCollection<IPropertyViewModel>), typeof(PropertyInspector), new UIPropertyMetadata(null, ViewModelsChanged));
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
         public PropertyInspector()
         {
             this.InitializeComponent();
