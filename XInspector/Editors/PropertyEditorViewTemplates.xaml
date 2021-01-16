@@ -1,0 +1,71 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:clr="clr-namespace:System;assembly=mscorlib"
+                    xmlns:viewModels="clr-namespace:XInspector.ViewModels"
+                    xmlns:xInspector="clr-namespace:XInspector"
+                    xmlns:textBox="clr-namespace:XControls.TextBox;assembly=XControls"
+                    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                    xmlns:numericUpDown="clr-namespace:XControls.NumericUpDown;assembly=XControls"
+                    xmlns:editors="clr-namespace:XInspector.Editors"
+                    xmlns:converters="clr-namespace:XInspector.Converters">
+
+    <editors:PropertyItemTemplateSelector x:Key="PropertyDataTemplateSelector" />
+
+    <DataTemplate x:Key="DefaultPropertyTemplate">
+        <DockPanel Margin="0 2 0 2" Visibility="{Binding Visibility}" LastChildFill="True">
+            <Label MaxWidth="150"  MinWidth="150" HorizontalContentAlignment="Left">
+                <TextBlock TextTrimming="CharacterEllipsis" Text="{Binding DisplayString, Mode=OneTime}" ToolTip="{Binding Tooltip, Mode=OneTime}">
+                </TextBlock>
+            </Label>
+            <ContentControl  Width="100" x:Name="Editor" IsEnabled="{Binding IsEnabled}" Content="{Binding}" ToolTip="{Binding Tooltip, Mode=OneTime}" Focusable="False" ContentTemplateSelector="{StaticResource PropertyDataTemplateSelector}" />
+        </DockPanel>
+    </DataTemplate>
+
+    <!-- CLR & Custom Types Data Templates -->
+    <DataTemplate x:Key="DefaultTemplate">
+        <TextBox IsEnabled="{Binding IsEnabled}" Background="Red" Text="{Binding Value, ValidatesOnDataErrors=True}" AcceptsReturn="False" VerticalScrollBarVisibility="Auto" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:String}}">
+        <TextBox IsEnabled="{Binding IsEnabled}" Text="{Binding Value, ValidatesOnDataErrors=True}" AcceptsReturn="False" VerticalScrollBarVisibility="Auto" />
+    </DataTemplate>
+
+    <!-- Boolean -->
+    <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:Boolean}}">
+        <CheckBox IsEnabled="{Binding IsEnabled}" IsChecked="{Binding Value, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+    </DataTemplate>
+
+    <!-- Int -->
+    <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:Int32}}">
+        <numericUpDown:Int32UpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}"/>
+    </DataTemplate>
+
+    <!-- Double -->
+    <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:Double}}">
+        <numericUpDown:DoubleUpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}" NumberDecimalDigits="{Binding DecimalCount, Mode=TwoWay}"/>
+    </DataTemplate>
+
+    <!-- Single -->
+    <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:Single}}">
+        <numericUpDown:SingleUpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}" NumberDecimalDigits="{Binding DecimalCount, Mode=TwoWay}"/>
+    </DataTemplate>
+
+    <!-- Long -->
+    <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:Int64}}">
+        <numericUpDown:LongUpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}"/>
+    </DataTemplate>
+
+    <!-- Enum -->
+    <DataTemplate x:Key="ComboBoxEnumTemplate">
+        <ComboBox SelectedValue="{Binding Value}" IsEnabled="{Binding IsEnabled}">
+            <ComboBox.ItemsSource>
+                <Binding Path="Value">
+                    <Binding.Converter>
+                        <converters:EnumToEnumArrayConverter/>
+                    </Binding.Converter>
+                </Binding>
+            </ComboBox.ItemsSource>
+        </ComboBox>
+    </DataTemplate>
+
+</ResourceDictionary>

@@ -1,1 +1,2 @@
-XInspector
+# XInspector
+A custom property editor

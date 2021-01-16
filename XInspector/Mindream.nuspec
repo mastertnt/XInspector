@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>XInspector</id>
+    <version>$version$</version>
+    <authors>mrHide</authors>
+    <owners>mrHide</owners>
+    <licenseUrl>https://github.com/mastertnt/XInspector/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/mastertnt/XInspector</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A Wpf object inspector.</description>
+    <releaseNotes>Alpha release.</releaseNotes>
+    <copyright>Copyright 2021</copyright>
+    <tags>WPF property inspector</tags>
+  </metadata>
+  	<files>
+	<file src="..\Build\Release_x86\XInspector.dll" target="lib\net47" />
+  </files>
+</package>
