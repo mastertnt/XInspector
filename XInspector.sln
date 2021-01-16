@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XInspector.Demo", "XInspector.Demo\XInspector.Demo.csproj", "{8470F2FB-83B2-4B39-9032-2EFFBB9E8ED3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XInspector.NUnit", "XInspector.NUnit\XInspector.NUnit.csproj", "{F050668D-471C-4A94-A35B-ED8BAE9D463F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XInspector.SampleModels", "XInspector.SampleModels\XInspector.SampleModels.csproj", "{DFF9639A-DD86-4558-970C-2BAA71F1119E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XInspector", "XInspector\XInspector.csproj", "{F9A887EA-DFE8-4F0C-84BF-5D30F5DCA21F}"
@@ -21,10 +19,6 @@ Global
 		{8470F2FB-83B2-4B39-9032-2EFFBB9E8ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8470F2FB-83B2-4B39-9032-2EFFBB9E8ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8470F2FB-83B2-4B39-9032-2EFFBB9E8ED3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F050668D-471C-4A94-A35B-ED8BAE9D463F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F050668D-471C-4A94-A35B-ED8BAE9D463F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F050668D-471C-4A94-A35B-ED8BAE9D463F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F050668D-471C-4A94-A35B-ED8BAE9D463F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DFF9639A-DD86-4558-970C-2BAA71F1119E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DFF9639A-DD86-4558-970C-2BAA71F1119E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFF9639A-DD86-4558-970C-2BAA71F1119E}.Release|Any CPU.ActiveCfg = Release|Any CPU
