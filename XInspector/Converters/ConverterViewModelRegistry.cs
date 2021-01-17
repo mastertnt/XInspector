@@ -53,5 +53,11 @@ namespace XInspector.Converters
                 this.Converters.Add(lConverter as IViewModelConverter);
             }
         }
+
+        public IViewModelConverter FindBestConverter(object pInstance)
+        { 
+            IViewModelConverter lConverter = this.Converters.OrderBy(pConverter => pConverter.CanConvert(pInstance)).LastOrDefault();
+            return lConverter;
+        }
     }
 }

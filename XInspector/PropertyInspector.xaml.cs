@@ -123,13 +123,16 @@ namespace XInspector
             {
                 if (this.EditedObjects.Any())
                 {
-                    List<IPropertyViewModel> lViewModels = new InstanceViewModelConverter().Convert(this.EditedObjects.First());
-                    foreach (var lViewModel in lViewModels)
+                    IViewModelConverter lConverter = ConverterViewModelRegistry.Instance.FindBestConverter(this.EditedObjects.First());
+                    if (lConverter != null)
                     {
-                        lViewModel.Instances.Add(this.EditedObjects.First());
-                        this.ViewModels.Add(lViewModel);
+                        List<IPropertyViewModel> lViewModels = lConverter.Convert(this.EditedObjects.First());
+                        foreach (var lViewModel in lViewModels)
+                        {
+                            lViewModel.Instances.Add(this.EditedObjects.First());
+                            this.ViewModels.Add(lViewModel);
+                        }
                     }
-                   
                 }
             }
             

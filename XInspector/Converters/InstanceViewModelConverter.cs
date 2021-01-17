@@ -38,7 +38,7 @@ namespace XInspector.Converters
             PropertyDescriptorCollection lProperties = TypeDescriptor.GetProperties(pObject);
             foreach (var lPropertyInfo in lProperties)
             {
-                IViewModelConverter lConverter = ConverterViewModelRegistry.Instance.Converters.FirstOrDefault(pConverter => pConverter.CanConvert(lPropertyInfo) != -1);
+                IViewModelConverter lConverter = ConverterViewModelRegistry.Instance.FindBestConverter(lPropertyInfo);
                 if (lConverter != null)
                 {
                     lResult.AddRange(lConverter.Convert(lPropertyInfo));
