@@ -14,7 +14,7 @@
     <DataTemplate x:Key="DefaultPropertyTemplate">
         <Grid Visibility="{Binding Visibility}" HorizontalAlignment="Stretch">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="210"></ColumnDefinition>
+                <ColumnDefinition Width="130"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Label HorizontalContentAlignment="Left" DockPanel.Dock="Left">
