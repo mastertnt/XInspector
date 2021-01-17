@@ -23,7 +23,7 @@ namespace XInspector.Attributes
         /// <summary>
         /// Gets or sets the minimum value.
         /// </summary>
-        public virtual Int64 Minimum 
+        public virtual Int32 Minimum 
         { 
             get; 
             set; 
@@ -32,7 +32,7 @@ namespace XInspector.Attributes
         /// <summary>
         /// Gets or sets the maximum value.
         /// </summary>
-        public virtual Int64 Maximum 
+        public virtual Int32 Maximum 
         { 
             get; 
             set; 
@@ -54,7 +54,7 @@ namespace XInspector.Attributes
         /// <summary>
         /// Constructor by initialization.
         /// </summary>
-        public BoundAttribute(Int64 pMinimum, Int64 pMaximum)
+        public BoundAttribute(Int32 pMinimum, Int32 pMaximum)
         {
             this.Minimum = pMinimum;
             this.Maximum = pMaximum;

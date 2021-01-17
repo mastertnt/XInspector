@@ -109,19 +109,6 @@ namespace XInspector.ViewModels
         {
             switch (pEventArgs.Action)
             {
-                case NotifyCollectionChangedAction.Remove:
-                {
-                    foreach (var lEditedObject in pEventArgs.OldItems)
-                    {
-                        INotifyPropertyChanged lPropertyChanged = lEditedObject as INotifyPropertyChanged;
-                        if (lPropertyChanged != null)
-                        {
-                            lPropertyChanged.PropertyChanged -= this.OnInstancePropertyChanged;
-                        }
-                    }
-                }
-                break;
-
                 case NotifyCollectionChangedAction.Add:
                 {
                     foreach (var lEditedObject in pEventArgs.NewItems)
