@@ -101,6 +101,7 @@
     <Compile Include="Attributes\BoundAttribute.cs" />
     <Compile Include="Attributes\SelectableCollectionAttribute.cs" />
     <Compile Include="Attributes\UnitAttribute.cs" />
+    <Compile Include="Behaviors\TextBoxEnterKeyUpdateBehavior.cs" />
     <Compile Include="Converters\ConverterViewModelRegistry.cs" />
     <Compile Include="Converters\EnumToEnumArrayConverter.cs" />
     <Compile Include="Converters\NativePropertyDescriptorViewModelConverter.cs" />

@@ -7,7 +7,9 @@
                     xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                     xmlns:numericUpDown="clr-namespace:XControls.NumericUpDown;assembly=XControls"
                     xmlns:editors="clr-namespace:XInspector.Editors"
-                    xmlns:converters="clr-namespace:XInspector.Converters">
+                    xmlns:converters="clr-namespace:XInspector.Converters"
+                    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+                    xmlns:behaviors="clr-namespace:XInspector.Behaviors">
 
     <editors:PropertyEditorTemplateSelector x:Key="PropertyDataTemplateSelector" />
 
@@ -31,7 +33,11 @@
     </DataTemplate>
 
     <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:String}}">
-        <TextBox IsEnabled="{Binding IsEnabled}" Text="{Binding Value, ValidatesOnDataErrors=True}" AcceptsReturn="False" VerticalScrollBarVisibility="Auto" />
+        <TextBox IsEnabled="{Binding IsEnabled}" Text="{Binding Value, ValidatesOnDataErrors=True}" AcceptsReturn="False" VerticalScrollBarVisibility="Auto">
+            <b:Interaction.Behaviors>
+                <behaviors:TextBoxEnterKeyUpdateBehavior />
+            </b:Interaction.Behaviors>
+        </TextBox>
     </DataTemplate>
 
     <!-- Boolean -->
