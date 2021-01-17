@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using XInspector.Attributes;
+using XInspector.Converters;
 using XInspector.SampleModels.Annotations;
 
 namespace XInspector.SampleModels
@@ -35,6 +36,7 @@ namespace XInspector.SampleModels
         }
 
         [DecimalCount(2)]
+        [Unit("Toto")]
         public double DoubleValue
         {
             get;

@@ -41,22 +41,22 @@
 
     <!-- Int -->
     <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:Int32}}">
-        <numericUpDown:Int32UpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}"/>
+        <numericUpDown:Int32UpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}" UnitSymbol="{Binding Unit, Mode=TwoWay}"/>
     </DataTemplate>
 
     <!-- Double -->
     <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:Double}}">
-        <numericUpDown:DoubleUpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}" NumberDecimalDigits="{Binding DecimalCount, Mode=TwoWay}"/>
+        <numericUpDown:DoubleUpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}" NumberDecimalDigits="{Binding DecimalCount, Mode=TwoWay}" UnitSymbol="{Binding Unit, Mode=TwoWay}"/>
     </DataTemplate>
 
     <!-- Single -->
     <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:Single}}">
-        <numericUpDown:SingleUpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}" NumberDecimalDigits="{Binding DecimalCount, Mode=TwoWay}"/>
+        <numericUpDown:SingleUpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}" NumberDecimalDigits="{Binding DecimalCount, Mode=TwoWay}" UnitSymbol="{Binding Unit, Mode=TwoWay}"/>
     </DataTemplate>
 
     <!-- Long -->
     <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:Int64}}">
-        <numericUpDown:LongUpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}"/>
+        <numericUpDown:LongUpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}" UnitSymbol="{Binding Unit, Mode=TwoWay}"/>
     </DataTemplate>
 
     <!-- Enum -->

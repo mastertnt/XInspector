@@ -83,5 +83,26 @@ namespace XInspector.ViewModels
 
             }
         }
+
+        /// <summary>
+        /// Unit to display.
+        /// </summary>
+        public String Unit
+        {
+            get
+            {
+                UnitAttribute lAttribute = this.mPropertyDescriptor.GetFirstAttributeOfType<UnitAttribute>();
+                if (lAttribute != null)
+                {
+                    return lAttribute.Description;
+                }
+
+                return string.Empty;
+            }
+            set
+            {
+
+            }
+        }
     }
 }
