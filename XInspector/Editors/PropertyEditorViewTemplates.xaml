@@ -21,7 +21,7 @@
                 <TextBlock TextTrimming="CharacterEllipsis" Text="{Binding DisplayString, Mode=OneTime}" ToolTip="{Binding Tooltip, Mode=OneTime}">
                 </TextBlock>
             </Label>
-            <ContentControl Width="250" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Grid.Column="1"  x:Name="Editor" IsEnabled="{Binding IsEnabled}" Content="{Binding}" ToolTip="{Binding Tooltip, Mode=OneTime}" Focusable="False" ContentTemplateSelector="{StaticResource PropertyDataTemplateSelector}" />
+            <ContentControl Width="150" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Grid.Column="1"  x:Name="Editor" IsEnabled="{Binding IsEnabled}" Content="{Binding}" ToolTip="{Binding Tooltip, Mode=OneTime}" Focusable="False" ContentTemplateSelector="{StaticResource PropertyDataTemplateSelector}" />
         </Grid>
     </DataTemplate>
 
