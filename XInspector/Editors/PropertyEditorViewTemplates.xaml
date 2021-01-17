@@ -12,13 +12,17 @@
     <editors:PropertyItemTemplateSelector x:Key="PropertyDataTemplateSelector" />
 
     <DataTemplate x:Key="DefaultPropertyTemplate">
-        <DockPanel Margin="0 2 0 2" Visibility="{Binding Visibility}" LastChildFill="True">
-            <Label MaxWidth="150"  MinWidth="150" HorizontalContentAlignment="Left">
+        <Grid Visibility="{Binding Visibility}" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="210"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalContentAlignment="Left" DockPanel.Dock="Left">
                 <TextBlock TextTrimming="CharacterEllipsis" Text="{Binding DisplayString, Mode=OneTime}" ToolTip="{Binding Tooltip, Mode=OneTime}">
                 </TextBlock>
             </Label>
-            <ContentControl  Width="100" x:Name="Editor" IsEnabled="{Binding IsEnabled}" Content="{Binding}" ToolTip="{Binding Tooltip, Mode=OneTime}" Focusable="False" ContentTemplateSelector="{StaticResource PropertyDataTemplateSelector}" />
-        </DockPanel>
+            <ContentControl Width="250" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Grid.Column="1"  x:Name="Editor" IsEnabled="{Binding IsEnabled}" Content="{Binding}" ToolTip="{Binding Tooltip, Mode=OneTime}" Focusable="False" ContentTemplateSelector="{StaticResource PropertyDataTemplateSelector}" />
+        </Grid>
     </DataTemplate>
 
     <!-- CLR & Custom Types Data Templates -->
