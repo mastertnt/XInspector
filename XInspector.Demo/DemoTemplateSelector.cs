@@ -32,10 +32,10 @@ namespace XInspector.Demo
         /// <returns>The retrieved data template, null otherwise.</returns>
         public DataTemplate FindDataTemplate(IPropertyViewModel pViewModel)
         {
-            if (pViewModel.PropertyType == typeof(XInspector.SampleModels.Point))
-            {
-                return this.mResourceDictionnary["PointTemplate"] as DataTemplate;
-            }
+            //if (pViewModel.PropertyType == typeof(XInspector.SampleModels.Point))
+            //{
+            //    return this.mResourceDictionnary["PointTemplate"] as DataTemplate;
+            //}
 
             return null;
         }

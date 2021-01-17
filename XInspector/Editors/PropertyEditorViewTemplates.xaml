@@ -27,7 +27,7 @@
 
     <!-- CLR & Custom Types Data Templates -->
     <DataTemplate x:Key="DefaultTemplate">
-        <TextBox IsEnabled="{Binding IsEnabled}" Background="Red" Text="{Binding Value, ValidatesOnDataErrors=True}" AcceptsReturn="False" VerticalScrollBarVisibility="Auto" />
+        <TextBox IsEnabled="{Binding IsEnabled}" Background="Red" Text="{Binding PropertyType, Mode=OneTime}" AcceptsReturn="False" VerticalScrollBarVisibility="Auto" />
     </DataTemplate>
 
     <DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type xInspector:PropertyInspector}, ResourceId={x:Type clr:String}}">

@@ -96,7 +96,7 @@ namespace XInspector.SampleModels
             set;
         }
 
-        public Point Position
+        public Point1 Position
         {
             get;
             set;

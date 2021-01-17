@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XInspector.SampleModels
 {
-    public class Point
+    public class Point1
     {
         public Double X
         {
