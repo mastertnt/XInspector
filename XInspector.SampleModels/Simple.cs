@@ -94,6 +94,12 @@ namespace XInspector.SampleModels
             set;
         }
 
+        public Point Position
+        {
+            get;
+            set;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }

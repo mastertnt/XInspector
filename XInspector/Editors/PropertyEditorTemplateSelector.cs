@@ -1,20 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using XInspector.ViewModels;
+using XSystem;
 
 namespace XInspector.Editors
 {
     /// <summary>
     /// Class used to retrieve an editor.
     /// </summary>
-    public class PropertyItemTemplateSelector : DataTemplateSelector
+    public class PropertyEditorTemplateSelector : DataTemplateSelector
     {
+
+        /// <summary>
+        /// The list of template selector plugins
+        /// </summary>
+        private readonly List<IPropertyTemplateSelector> mTemplateSelectors;
+
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public PropertyItemTemplateSelector()
+        public PropertyEditorTemplateSelector()
         {
+            this.mTemplateSelectors = typeof(IPropertyTemplateSelector).CreateAll<IPropertyTemplateSelector>().ToList();
         }
         
         /// <summary>
@@ -27,7 +37,16 @@ namespace XInspector.Editors
         {
             FrameworkElement lElement = pContainer as FrameworkElement;
             IPropertyViewModel lPropertyViewModel = pItem as IPropertyViewModel;
-            DataTemplate lResult = null;
+            DataTemplate lResult;
+
+            foreach (IPropertyTemplateSelector lPlugin in this.mTemplateSelectors)
+            {
+                lResult = lPlugin.FindDataTemplate(lPropertyViewModel);
+                if (lResult != null)
+                {
+                    return lResult;
+                }
+            }
 
             if (lPropertyViewModel.Value is Enum)
             {

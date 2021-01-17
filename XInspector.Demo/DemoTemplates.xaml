@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:clr="clr-namespace:System;assembly=mscorlib"
+                    xmlns:textBox="clr-namespace:XControls.TextBox;assembly=XControls"
+                    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                    xmlns:numericUpDown="clr-namespace:XControls.NumericUpDown;assembly=XControls"
+                    xmlns:xInspector="clr-namespace:XInspector;assembly=XInspector">
+
+    <DataTemplate x:Key="PointTemplate">
+        <StackPanel>
+            <DockPanel LastChildFill="True">
+                <Label DockPanel.Dock="Left">X</Label>
+                <numericUpDown:DoubleUpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value.X, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}" NumberDecimalDigits="{Binding DecimalCount, Mode=TwoWay}"/>
+            </DockPanel>
+
+            <DockPanel LastChildFill="True">
+                <Label DockPanel.Dock="Left">Y</Label>
+                <numericUpDown:DoubleUpDown IsEnabled="{Binding IsEnabled}" Value="{Binding Value.Y, Mode=TwoWay}" Minimum="{Binding Minimum, Mode=TwoWay}" Maximum="{Binding Maximum, Mode=TwoWay}" NumberDecimalDigits="{Binding DecimalCount, Mode=TwoWay}"/>
+            </DockPanel>
+        </StackPanel>
+    </DataTemplate>
+  
+</ResourceDictionary>

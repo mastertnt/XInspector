@@ -103,6 +103,7 @@
     <Compile Include="Converters\ConverterViewModelRegistry.cs" />
     <Compile Include="Converters\EnumToEnumArrayConverter.cs" />
     <Compile Include="Converters\NativePropertyDescriptorViewModelConverter.cs" />
+    <Compile Include="Editors\IPropertyTemplateSelector.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="PropertyInspector.xaml.cs">
       <DependentUpon>PropertyInspector.xaml</DependentUpon>
@@ -111,7 +112,7 @@
     <Compile Include="Converters\PropertyDescriptorViewModelConverter.cs" />
     <Compile Include="Converters\TypeViewModelConverter.cs" />
     <Compile Include="Converters\IViewModelConverter.cs" />
-    <Compile Include="Editors\PropertyItemTemplateSelector.cs" />
+    <Compile Include="Editors\PropertyEditorTemplateSelector.cs" />
     <Compile Include="ViewModels\BasePropertyViewModel.cs" />
     <Compile Include="ViewModels\IPropertyViewModel.cs" />
     <Compile Include="ViewModels\NativePropertyDescriptorViewModel.cs" />

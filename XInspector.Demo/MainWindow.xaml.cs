@@ -34,7 +34,7 @@ namespace XInspector.Demo
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            this.Instances.Items.Add(new Simple() { BooleanValue = true, DoubleValue = 3.1, IntValue = 42, StringValue = "MyString" });
+            this.Instances.Items.Add(new Simple() { BooleanValue = true, DoubleValue = 3.1, IntValue = 42, StringValue = "MyString", Position = new XInspector.SampleModels.Point() { X=23, Y=31} });
         }
     }
 }

@@ -9,7 +9,7 @@
                     xmlns:editors="clr-namespace:XInspector.Editors"
                     xmlns:converters="clr-namespace:XInspector.Converters">
 
-    <editors:PropertyItemTemplateSelector x:Key="PropertyDataTemplateSelector" />
+    <editors:PropertyEditorTemplateSelector x:Key="PropertyDataTemplateSelector" />
 
     <DataTemplate x:Key="DefaultPropertyTemplate">
         <Grid Visibility="{Binding Visibility}" HorizontalAlignment="Stretch">
