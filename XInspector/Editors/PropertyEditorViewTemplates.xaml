@@ -3,7 +3,6 @@
                     xmlns:clr="clr-namespace:System;assembly=mscorlib"
                     xmlns:viewModels="clr-namespace:XInspector.ViewModels"
                     xmlns:xInspector="clr-namespace:XInspector"
-                    xmlns:textBox="clr-namespace:XControls.TextBox;assembly=XControls"
                     xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                     xmlns:numericUpDown="clr-namespace:XControls.NumericUpDown;assembly=XControls"
                     xmlns:editors="clr-namespace:XInspector.Editors"
